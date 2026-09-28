@@ -1,0 +1,556 @@
+/* =========================================================
+   NAGASAI — PREMIUM PORTFOLIO
+   CARDS / COMPONENTS
+========================================================= */
+
+/* =========================================================
+   SHARED INTERACTION
+========================================================= */
+
+.glass-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 0;
+  padding: 30px;
+  transition:
+    transform 0.4s var(--ease-out),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding: 0 22px;
+
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+
+  background: transparent;
+  color: var(--text);
+
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  transition:
+    transform 0.35s var(--ease-out),
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #080808;
+  box-shadow: none;
+}
+
+.hero-buttons a:first-child {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #080808;
+}
+
+.hero-buttons a:first-child:hover {
+  background: #e3ff72;
+  border-color: #e3ff72;
+}
+
+
+/* =========================================================
+   PROJECT CARD — LEGACY COMPATIBILITY
+   Used if older project markup is still present.
+========================================================= */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 0;
+  padding: 0;
+
+  transition:
+    transform 0.5s var(--ease-out),
+    border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+}
+
+
+/* Project image */
+
+.project-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+
+  margin: 0;
+
+  border-radius: 0;
+
+  transition:
+    transform 0.8s var(--ease-out),
+    filter 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.035);
+  filter: brightness(1.05);
+}
+
+
+/* Project content */
+
+.project-card-content {
+  padding: 28px;
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+
+  color: var(--text);
+
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.project-card p {
+  margin-top: 8px;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROJECT LINKS
+========================================================= */
+
+.project-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-top: 24px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 0 5px;
+
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  border-radius: 0;
+
+  background: transparent;
+  color: var(--text-soft);
+
+  text-decoration: none;
+
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s var(--ease-out);
+}
+
+.project-links a:hover {
+  transform: translateY(-2px);
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.project-title {
+  margin: 0;
+}
+
+.project-title a {
+  display: inline-block;
+
+  color: var(--text);
+
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.35s var(--ease-out);
+}
+
+.project-title a:hover {
+  transform: translateX(4px);
+  color: var(--accent);
+
+  text-shadow: none;
+}
+
+
+/* =========================================================
+   SKILL CARD — LEGACY COMPATIBILITY
+========================================================= */
+
+.skill-card {
+  position: relative;
+
+  padding: 28px;
+
+  background: var(--bg-soft);
+
+  border: 1px solid var(--border-soft);
+  border-radius: 0;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s var(--ease-out),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: none;
+}
+
+
+/* Remove old animated gradient border */
+
+.skill-card::before,
+.skill-card::after {
+  display: none;
+}
+
+
+/* =========================================================
+   OLD SKILL ROW COMPATIBILITY
+========================================================= */
+
+.skill {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.skill:last-child {
+  border-bottom: 0;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  color: var(--text-soft);
+
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.skill:hover .skill-name {
+  color: var(--accent);
+}
+
+.skill-percent {
+  color: var(--text-dim);
+
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+
+  opacity: 1;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s var(--ease-out);
+}
+
+.skill:hover .skill-percent {
+  color: var(--accent);
+  transform: none;
+}
+
+
+/* =========================================================
+   LEGACY PROGRESS BAR
+   Kept visually minimal so old markup doesn't break.
+========================================================= */
+
+.progress {
+  position: relative;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 0;
+
+  background: var(--accent);
+
+  box-shadow: none;
+
+  transition: width 1s var(--ease-out);
+}
+
+.progress::after {
+  display: none;
+}
+
+
+/* =========================================================
+   SERVICE / CONTENT CARD COMPATIBILITY
+========================================================= */
+
+.service-card {
+  position: relative;
+
+  padding: 30px 0;
+
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border-soft);
+  border-radius: 0;
+
+  transition:
+    padding-left 0.4s var(--ease-out),
+    border-color 0.3s ease;
+}
+
+.service-card:hover {
+  padding-left: 12px;
+  border-color: var(--border-strong);
+}
+
+.service-card h3 {
+  color: var(--text);
+
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: var(--accent);
+}
+
+.service-card p {
+  max-width: 600px;
+  margin-top: 12px;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   GENERIC CONTENT CARD
+========================================================= */
+
+.content-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 0;
+
+  padding: 30px;
+
+  transition:
+    transform 0.4s var(--ease-out),
+    border-color 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+}
+
+
+/* =========================================================
+   TAGS / TECH PILLS
+========================================================= */
+
+.tech-tag,
+.project-tag,
+.tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 10px;
+
+  border: 1px solid var(--border);
+  border-radius: 0;
+
+  background: transparent;
+  color: var(--text-dim);
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tech-tag:hover,
+.project-tag:hover,
+.tag:hover {
+  color: var(--text-soft);
+  border-color: var(--border-strong);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero-buttons a {
+    min-height: 46px;
+    padding-inline: 19px;
+  }
+
+  .project-card-content {
+    padding: 22px;
+  }
+
+  .project-card h3 {
+    font-size: 24px;
+  }
+
+  .project-links {
+    gap: 15px;
+  }
+
+  .skill-card {
+    padding: 22px;
+  }
+
+  .content-card {
+    padding: 22px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .project-links {
+    align-items: flex-start;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .glass-card,
+  .project-card,
+  .project-card img,
+  .project-title a,
+  .project-links a,
+  .skill-card,
+  .service-card,
+  .content-card {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .glass-card:hover,
+  .skill-card:hover,
+  .content-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,425 @@
+/* =========================================================
+   NAGASAI — PREMIUM PORTFOLIO
+   ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+   BASIC FADE UP
+========================================================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out);
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   GENERAL REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+
+  transition:
+    opacity 0.75s var(--ease-out),
+    transform 0.75s var(--ease-out);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   REVEAL FROM LEFT
+========================================================= */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+
+  transition:
+    opacity 0.75s var(--ease-out),
+    transform 0.75s var(--ease-out);
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   REVEAL FROM RIGHT
+========================================================= */
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(24px);
+
+  transition:
+    opacity 0.75s var(--ease-out),
+    transform 0.75s var(--ease-out);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   SIMPLE FADE
+========================================================= */
+
+.fade-in {
+  opacity: 0;
+
+  transition:
+    opacity 0.7s ease;
+}
+
+.fade-in.active,
+.fade-in.show {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SCALE REVEAL
+   Very subtle — no blur.
+========================================================= */
+
+.scale-reveal {
+  opacity: 0;
+  transform: scale(0.97);
+
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out);
+}
+
+.scale-reveal.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =========================================================
+   SKILL CARD COMPATIBILITY
+========================================================= */
+
+.skill-card {
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   STAGGER DELAYS
+========================================================= */
+
+[data-delay="1"] {
+  transition-delay: 0.08s;
+}
+
+[data-delay="2"] {
+  transition-delay: 0.16s;
+}
+
+[data-delay="3"] {
+  transition-delay: 0.24s;
+}
+
+[data-delay="4"] {
+  transition-delay: 0.32s;
+}
+
+[data-delay="5"] {
+  transition-delay: 0.40s;
+}
+
+[data-delay="6"] {
+  transition-delay: 0.48s;
+}
+
+
+/* =========================================================
+   HERO TEXT ENTRANCE
+========================================================= */
+
+.hero-eyebrow,
+.hero-title,
+.hero-description,
+.hero-actions {
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation:
+    heroEnter 0.8s var(--ease-out) forwards;
+}
+
+.hero-eyebrow {
+  animation-delay: 0.15s;
+}
+
+.hero-title {
+  animation-delay: 0.25s;
+}
+
+.hero-description {
+  animation-delay: 0.38s;
+}
+
+.hero-actions {
+  animation-delay: 0.50s;
+}
+
+@keyframes heroEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   HERO VISUAL ENTRANCE
+========================================================= */
+
+.hero-visual {
+  opacity: 0;
+  transform: translateY(18px);
+
+  animation:
+    heroVisualEnter 1s var(--ease-out) 0.35s forwards;
+}
+
+@keyframes heroVisualEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.image-hover {
+  overflow: hidden;
+}
+
+.image-hover img {
+  transition:
+    transform 0.8s var(--ease-out),
+    filter 0.5s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =========================================================
+   LINK ARROW
+========================================================= */
+
+.arrow-hover {
+  transition:
+    gap 0.3s var(--ease-out),
+    color 0.3s ease;
+}
+
+.arrow-hover span {
+  display: inline-block;
+
+  transition:
+    transform 0.3s var(--ease-out);
+}
+
+.arrow-hover:hover {
+  color: var(--accent);
+}
+
+.arrow-hover:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   UNDERLINE REVEAL
+========================================================= */
+
+.underline-reveal {
+  position: relative;
+}
+
+.underline-reveal::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 100%;
+  height: 1px;
+
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition:
+    transform 0.4s var(--ease-out);
+}
+
+.underline-reveal:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* =========================================================
+   NAVBAR ENTRANCE
+========================================================= */
+
+.site-header {
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.4s var(--ease-out);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.mobile-menu-inner {
+  transform: translateY(-15px);
+
+  transition:
+    transform 0.5s var(--ease-out);
+}
+
+.mobile-menu.open .mobile-menu-inner {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   CUSTOM CURSOR
+========================================================= */
+
+.custom-cursor {
+  will-change: transform, width, height;
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee-track {
+  will-change: transform;
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.page-loader {
+  will-change: opacity;
+}
+
+.loader-line span {
+  will-change: width;
+}
+
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.reveal,
+.reveal-left,
+.reveal-right,
+.fade-up,
+.fade-in,
+.scale-reveal,
+.skill-card,
+.hero-eyebrow,
+.hero-title,
+.hero-description,
+.hero-actions,
+.hero-visual {
+  will-change: opacity, transform;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .fade-up,
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .fade-in,
+  .scale-reveal,
+  .skill-card,
+  .hero-eyebrow,
+  .hero-title,
+  .hero-description,
+  .hero-actions,
+  .hero-visual {
+    opacity: 1;
+    transform: none;
+
+    animation: none;
+
+    transition: none;
+  }
+
+  .image-hover img,
+  .arrow-hover,
+  .arrow-hover span,
+  .underline-reveal::after {
+    transition: none;
+  }
+}
